@@ -1,11 +1,11 @@
-function TodoItem({ name, isCompleted }) {
+function TodoItem({ data, isCompleted, name }) {
   return (
     <li className="list-group-item d-flex justify-content-between align-items-center">
       <div>
         <button
           className={`btn btn-sm ${isCompleted ? "btn-success" : "btn-light"}`}
         >
-          <i class="bi bi-check-square"></i>
+          <i className="bi bi-check-square"></i>
         </button>
         <span
           className={`ms-2 ${
@@ -16,7 +16,7 @@ function TodoItem({ name, isCompleted }) {
         </span>
       </div>
       <button className="btn btn-sm btn-danger">
-        <i class="bi bi-trash"></i>
+        <i className="bi bi-trash"></i>
       </button>
     </li>
   );
