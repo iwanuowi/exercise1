@@ -12,7 +12,7 @@ function App() {
     {
       id: 2,
       name: "task 2",
-      isCompleted: true,
+      isCompleted: false,
     },
     {
       id: 3,
@@ -32,13 +32,13 @@ function App() {
         style={{ maxWidth: "500px", margin: "60px auto" }}
       >
         <div className="card-body">
-          <TodoList data={data} />
+          <TodoList data={data} setData={setData} />
           <AddTodoForm
             onAddNew={(newValue) =>
               setData([
                 ...data,
                 {
-                  id: Math.floor(),
+                  id: Math.random(),
                   name: newValue,
                 },
               ])
